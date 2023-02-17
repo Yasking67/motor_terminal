@@ -75,7 +75,7 @@ void MainWindow::on_rightBtn_pressed()
     stream << (uchar)0x01;
 
     serial->write(ba);
-    qDebug() << ba.toHex();
+//    qDebug() << ba.toHex();
 }
 
 void MainWindow::on_leftBtn_pressed()
@@ -90,5 +90,5 @@ void MainWindow::on_leftBtn_pressed()
     stream << (uchar)0x00;
 
     serial->write(ba);
-    qDebug() << ba.toHex();
+//    qDebug() << ba.toHex();
 }
