@@ -22,6 +22,8 @@ private slots:
     void on_speedBtn_pressed();
     void on_leftBtn_pressed();
     void on_rightBtn_pressed();
+    void on_upBtn_pressed();
+    void on_downBtn_pressed();
     void on_serialBtn_pressed();
 
 

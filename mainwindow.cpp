@@ -92,3 +92,33 @@ void MainWindow::on_leftBtn_pressed()
     serial->write(ba);
 //    qDebug() << ba.toHex();
 }
+
+void MainWindow::on_upBtn_pressed()
+{
+    QByteArray ba;
+    QDataStream stream(&ba, QIODevice::WriteOnly);
+    stream << (uchar)0xfa;
+    stream << (uchar)0xce;
+    stream << (uchar)0x04;
+    stream << (uchar)0x02;
+    stream << ui->angleLineEdit->text().toShort();
+    stream << (uchar)0x00;
+
+    serial->write(ba);
+//    qDebug() << ba.toHex();
+}
+
+void MainWindow::on_downBtn_pressed()
+{
+    QByteArray ba;
+    QDataStream stream(&ba, QIODevice::WriteOnly);
+    stream << (uchar)0xfa;
+    stream << (uchar)0xce;
+    stream << (uchar)0x04;
+    stream << (uchar)0x02;
+    stream << ui->angleLineEdit->text().toShort();
+    stream << (uchar)0x01;
+
+    serial->write(ba);
+//    qDebug() << ba.toHex();
+}
